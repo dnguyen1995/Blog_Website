@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+h3 {
+  display:inline;
+}
+#header {
+  background-color: #F3F1F5;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 5px;
+}
+
+.titles{
+  padding: 0 7%;
+}
+
+.header-title{
+  display: inline-block;
+}
+
+.sub-headings-div {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.body-container {
+  background-color: grey;
+  margin:0 7%;
+}
+
+.body-title {
+  padding: 1% 0;
+}
