@@ -20,16 +20,38 @@ h3 {
 }
 
 .sub-headings-div {
-  display: inline-block;
-  position: absolute;
-  right: 0;
+  display: inline;
+  padding-left: 100px;
 }
 
 .body-container {
-  background-color: grey;
   margin:0 7%;
 }
 
 .body-title {
-  padding: 1% 0;
+  margin: 0;
+  padding:30px 0;
+}
+
+.compose-heading{
+  margin: 0;
+  padding-bottom: 15px;
+}
+.text-field {
+  width: 100%;
+  padding-top: 1px;
+}
+
+.text-field.text-blog {
+  height: 100px;
+}
+
+.submit-button{
+  font-weight: bold;
+}
+
+.blog-title{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }

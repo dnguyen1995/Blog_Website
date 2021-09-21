@@ -1,2 +1,12 @@
 <%- include("header") -%>
+
+<% for(var i=0;i<blogs.length;i++){ %>
+  <div class="blog-title">
+    <%= blogs[i].title %>
+  </div>
+  <div class="blog-post">
+    <%= blogs[i].subBlog %>
+  </div>
+<% } %>
+
 <%- include("footer") -%>
