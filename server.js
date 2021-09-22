@@ -14,7 +14,6 @@ const aboutText="About Us";
 const composeText="Compose";
 
 const blogList =[];
-const fullText=[];
 var blogCount=blogList.length;
 
 app.get("/",function(request,response){
@@ -33,21 +32,31 @@ app.post("/",function(request,response){
     }
   }
   function createBlog(title,blog){
+    this.blogNumber=blogCount,
     this.title=title,
     this.subBlog=trimText(blog)
-    this.fullText=blog;
+    this.fullText=blog,
+    blogCount++
   }
   const Blog = new createBlog(blogTitle,blogText);
   blogList.push(Blog);
+
   console.log(blogList);
 
   response.redirect("/");
 });
 
+app.post("/posts",function(request,response){
+  var blogNo = request.body.blogNumber;
+  var blogHeading = blogList[blogNo].title;
+  var blogPost = blogList[blogNo].fullText;
+  response.render("template",{bodyTitle:blogHeading,bodyText:blogPost});
+});
+
+
 app.get("/compose",function(request,response){
   response.render("compose",{bodyTitle:composeText});
 });
-
 
 app.listen(3000,function(){
   console.log("Blog server online at port 3000");

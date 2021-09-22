@@ -1,12 +1,15 @@
 <%- include("header") -%>
 
 <% for(var i=0;i<blogs.length;i++){ %>
+<form action="posts" method="post">
   <div class="blog-title">
     <%= blogs[i].title %>
   </div>
   <div class="blog-post">
     <%= blogs[i].subBlog %>
+    <button type="submit" name="blogNumber" value= <%=blogs[i].blogNumber%> >See More</button>
   </div>
+</form>
 <% } %>
 
 <%- include("footer") -%>
